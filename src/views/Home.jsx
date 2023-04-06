@@ -33,7 +33,8 @@ const Home = () => {
     <div className='Home'>
       <div className="home__hotZone">
         <div className='home__img-ccontainer'>
-          <img className='home__img' src="https://s3-alpha-sig.figma.com/img/ca59/d9ce/98042af437fdff212d3259040db2e2db?Expires=1680480000&Signature=Tr9zNQTb0fUhyJmZH9NP3qwVdfWVXIrkosGlSvI86Yig9zLhhR75thPor8ACsSctprhOn5NjOavtetDjvcXhQjI0A3uVW5CCUwjEqxD45lmyYGgI1yCca0zSZ1iMIDOMHX-XyM5uu4w5vMUVk4K3PgIyYUicJzpZlOENYBDxwM3M18PYVs6bEqSNsEksGRaHJEQEt3F8rwRPM2rb3E17ISCJv67bACWbCojPFH7~hCk7sLletlxbh6mll5meJ4VqQYtnBJ0llqIxY5D9a2jnhffEulOGh8AX2uPl3sWhez4jkBqsIDhYsecxs1wpasVpLHGPwfio0-lh83Dn4dDQNw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+          <img className='home__img' src="https://64.media.tumblr.com/d0a6337e555169f950fb3101045fb8ba/b276d43b38632350-12/s1280x1920/08ff32dba9de0098f058d25d5994cd87a60bcc20.pnj" alt="" />
+          {/* <img className='home__img' src="https://s3-alpha-sig.figma.com/img/ca59/d9ce/98042af437fdff212d3259040db2e2db?Expires=1680480000&Signature=Tr9zNQTb0fUhyJmZH9NP3qwVdfWVXIrkosGlSvI86Yig9zLhhR75thPor8ACsSctprhOn5NjOavtetDjvcXhQjI0A3uVW5CCUwjEqxD45lmyYGgI1yCca0zSZ1iMIDOMHX-XyM5uu4w5vMUVk4K3PgIyYUicJzpZlOENYBDxwM3M18PYVs6bEqSNsEksGRaHJEQEt3F8rwRPM2rb3E17ISCJv67bACWbCojPFH7~hCk7sLletlxbh6mll5meJ4VqQYtnBJ0llqIxY5D9a2jnhffEulOGh8AX2uPl3sWhez4jkBqsIDhYsecxs1wpasVpLHGPwfio0-lh83Dn4dDQNw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" /> */}
           {/* <img className='home__img' src="https://craig1123.github.io/pokedex/img/Pokedex.png" alt="" /> */}
         </div>
         <div className='home__text-zone'>
