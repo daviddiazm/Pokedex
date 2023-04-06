@@ -1,0 +1,97 @@
+.Home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* position: relative; */
+  /* background-image: url('https://64.media.tumblr.com/4779d457d8a2ab84d32a5a724ef4517f/a442ea7394a73e18-55/s640x960/4e4402f93d9f88426f005ddaed1ebf39df3416fe.jpg'); */
+  /* background-image: url('https://i.pinimg.com/originals/3a/2b/60/3a2b608f8e1ed6a80332254d5fe53e65.gif'); */
+  /* background-image: url('https://64.media.tumblr.com/daad96d4dae6f4a36b37718f5ac7d902/73463a2a6a1f328c-b2/s250x400/8e13a022cac1bc266699e2f1794ac7f62cf0610c.gifv'); */
+  background-image: url('https://cutewallpaper.org/21/minimalist-pokemon-wallpaper/Minimalist-Pokeball-Wallpapers-Top-Free-Minimalist-.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat ;
+  background-size:cover ;
+}
+
+
+
+.home__hotZone {
+  backdrop-filter: blur(8px) ;
+  background-color: rgba(255, 255, 255, 0.365);
+  width: 45vw;
+  height: 60vh;
+  /* margin-left: 5vw; */
+  min-width: 300px;
+  border: 5px solid black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center ;
+  gap: 3vh;
+}
+
+.home__img-ccontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.home__img {
+  width: 90%;
+  max-width: 500px;
+}
+
+
+.home__text-zone {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3vh;
+  
+}
+
+.home__form {
+  display: flex;
+}
+
+.home__input-Text {
+  padding: 12px;
+  border: solid 1px #DD1A1A;
+  border-radius: 15px 0px 0px 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.home__input-btn {
+  border-radius: 0px 15px 15px 0px;
+}
+
+.home__footer {
+  overflow: hidden;
+  position: absolute ;
+  /* top: 0; */
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.525);
+  width: 100vw;
+  height: 70px;
+}
+
+/* @media (min-width: 320px) {
+  .home__hotZone {
+    backdrop-filter: blur(8px) ;
+    width: 45vw;
+    margin-left: 5vw;
+    min-width: 350px;
+    padding: 20px;
+    border: 5px solid #69AACB;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center ;
+  }
+} */
