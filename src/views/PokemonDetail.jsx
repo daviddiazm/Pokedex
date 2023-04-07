@@ -17,7 +17,8 @@ const getPokemonById = async (id) => {
 
 const PokemonDetail = () => {
   const [pokemon, setPokemon] = useState(null)
-  const {state} = useLocation()
+
+  const { state } = useLocation()
   const { id } = useParams();
 
   const loadData = async () => {
@@ -26,21 +27,50 @@ const PokemonDetail = () => {
   }
 
   useEffect(() => {
-    if(!state?.pokemon) loadData(); 
+    if (!state?.pokemon) loadData();
     else setPokemon(state.pokemon);
   }, [])
 
 
   return (
-    <div>
+    <div className='pokemonDetail'>
       {/* <p>el id del pokemon seleccionado {id}</p> */}
       {(!pokemon) ? <p>cargando</p>
-        : <div>
-          <h1 >{pokemon.name}</h1>
-          <div >
-            <img src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name}  />
+        : <div className='pokemonDetail__first-Card'>
+          <div className='pokemonDetail__fc-firstView'>
+            <img className='pokemonDetail__fc-img' src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name} />
+            {/* <div></div> */}
           </div>
-          {/* {pokemon.abilities.map((e) => <p>{e.ability.name}</p>)} */}
+          <div className="pokemonDetail__fc-reference">
+            <h3 className='pokemonDetail__id'>#{pokemon.id}</h3>
+            <h1 className='pokemonDetail__name'>{pokemon.name}</h1>
+            <section className="pokemonDetail__fc-refe-bottom">
+              <div className="pokemonDetail__fc-types">
+                <h3>Type</h3>
+                <div className='pokemonDetail__fc-types-container'>
+                  {pokemon.types.map((e) => <p className='pokemonDetail__fc-type'>{e.type.name}</p>)}
+                </div>
+              </div>
+              <div className="polemonDetail__fc__abilities">
+                <h3>Abilities</h3>
+                <div className='polemonDetail__fc__abilities-container'>
+                  {pokemon.abilities.map((e) => <p className='polemonDetail__fc__abilitie'>{e.ability.name}</p>)}
+                </div>
+              </div>
+            </section>
+
+
+            <section className='pokemonDetail__fc-stats'>
+              {pokemon.stats.map((stat) => 
+              <div>
+                <h3>{stat.stat.name}</h3>
+                <h4>{stat.base_stat}</h4>
+              </div>
+              )}
+            </section>
+
+
+          </div>
         </div>}
     </div>
   )
