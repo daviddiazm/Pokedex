@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 
+import './PokemonCard.css'
 
 const getPokemonById = async (url) => {
   try {
@@ -32,23 +33,23 @@ const PokemonCard = ({ pokemonData }) => {
 
 
   return (
-    <>
+    <div className='PokemonCard'>
       {!pokemon ? <p>Cargando</p>
         : <article onClick={handleClickNavigate}>
 
-          <section>
+          <section className='pokemonCard__top'>
             <div></div>
-            <img src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name} />
+            <img className='pokeCard__img' src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name} />
           </section>
 
-          <section >
-            <section>
+          <section className='pokemonCard__bottom'>
+            <section className='pokemonCard__reference-info'>
               <h3 >{pokemon.name}</h3>
               <h4>{pokemon.types[0].type.name}</h4>
               <h5>Tipo</h5>
             </section>
 
-            <section>
+            <section className='pokemonCard__stats-info_container'>
               {/* {pokemon.stats.map((stat) => {
                 <section key={stat.stat.name}>
                   <h3>a {stat.stat.name}</h3>
@@ -56,7 +57,7 @@ const PokemonCard = ({ pokemonData }) => {
                 </section>
               })} */}
               {pokemon.stats.map(stat => (
-                <section key={stat.stat.name}>
+                <section key={stat.stat.name} className='pokeCard__stats'>
                   <h3>{stat.stat.name.toUpperCase()}</h3>
                   <p>{stat.base_stat}</p>
                 </section>
@@ -67,7 +68,7 @@ const PokemonCard = ({ pokemonData }) => {
           </section>
         </article>
       }
-    </>
+    </div>
 
   )
 }

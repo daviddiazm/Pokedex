@@ -1,0 +1,23 @@
+.pokede__layout {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.pokedexLayout__header {
+  padding: 10px;
+  background-color: #DD1A1A;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+.pokeLay__img {
+  max-width: 350px;
+  width: 50%;
+}
+
+.pokeLay__btn {
+  width: 15%;
+  min-width: 100px;
+}

@@ -55,7 +55,9 @@ const Home = () => {
         </form>
       </div>
 
-      {nameError && <p >{nameError}</p>}
+      <div className="home__alert">
+        {nameError && <p className='home__text-alert'>{nameError}</p>}
+      </div>
 
       <footer className='home__footer'>
       </footer>

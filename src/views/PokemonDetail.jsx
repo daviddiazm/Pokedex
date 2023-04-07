@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 
+import './PokemonDetail.css'
 
 const getPokemonById = async (id) => {
 
