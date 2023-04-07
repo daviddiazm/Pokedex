@@ -14,7 +14,6 @@ const getPokemonById = async (id) => {
   }
 }
 
-
 const PokemonDetail = () => {
   const [pokemon, setPokemon] = useState(null)
 
@@ -25,6 +24,17 @@ const PokemonDetail = () => {
     const pokemon = await getPokemonById(id);
     setPokemon(pokemon)
   }
+
+  const pokemonStatsPrueba = (statNum) => {
+    if (!statNum) {
+      return { width: `0%` }
+    } else {
+      const statValue = statNum * 100;
+      const total = statValue / 200;
+      return { width: `${Math.round(total)}%` };
+    }
+  }
+  console.log(pokemonStatsPrueba(45));
 
   useEffect(() => {
     if (!state?.pokemon) loadData();
@@ -60,17 +70,25 @@ const PokemonDetail = () => {
             </section>
 
 
-            <section className='pokemonDetail__fc-stats'>
-              {pokemon.stats.map((stat) => 
-              <div>
-                <h3>{stat.stat.name}</h3>
-                <h4>{stat.base_stat}</h4>
-              </div>
-              )}
-            </section>
-
-
           </div>
+
+          <section className='pokemonDetail__fc-stats'>
+            {pokemon.stats.map((stat) =>
+              <div className='pokemonDetail__fc-stat-container'>
+                <h3>{stat.stat.name}</h3>
+                <h4 className='pokemonDetail__stats-numbre'>{stat.base_stat}/200</h4>
+                <div className='pokemonDetail__grafic-stat'>
+                  <div className='pokemonDetail__progres-grafic' style={pokemonStatsPrueba(stat.base_stat)} ></div>
+                </div>
+              </div>
+            )}
+          </section>
+
+          <section className='pokemonDetail__moves'>
+            {pokemon.moves.map((move) => <p className='polemonDetail__fc__abilitie'>{move.move.name}</p>)}
+          </section>
+
+
         </div>}
     </div>
   )

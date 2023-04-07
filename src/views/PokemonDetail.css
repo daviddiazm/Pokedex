@@ -82,3 +82,43 @@
   border: 1px solid ;
   border-radius: 15px;
 }
+
+
+.pokemonDetail__fc-stats {
+  padding: 50px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+
+.pokemonDetail__fc-stat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemonDetail__stats-numbre {
+  color: gray;
+}
+
+.pokemonDetail__grafic-stat {
+  width: 250px;
+  height: 10px;
+  background-color: gainsboro;
+}
+
+.pokemonDetail__progres-grafic {
+  width: 10%;
+  height: 100%;
+  background-color: #DD1A1A;
+}
+
+
+.pokemonDetail__moves {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  color: gray;
+}
