@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border-radius: 15px;
 }
 
 .pokemonDetail__fc-firstView {
@@ -107,12 +108,16 @@
   width: 250px;
   height: 10px;
   background-color: gainsboro;
+  border-radius: 15px;
+
 }
 
 .pokemonDetail__progres-grafic {
   width: 10%;
   height: 100%;
   background-color: #DD1A1A;
+  border-radius: 15px;
+  
 }
 
 
@@ -121,4 +126,5 @@
   gap: 5px;
   flex-wrap: wrap;
   color: gray;
+  margin: 30px;
 }
